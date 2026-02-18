@@ -5,7 +5,7 @@ backend:
   replicaCount: 3
   image:
     repository: fasih6/backend
-    tag: "main-2b69588d"
+    tag: "60d564a"
     pullPolicy: IfNotPresent
   port: 5000
   resources:
@@ -19,7 +19,6 @@ backend:
     scrape: "true"
     port: "5000"
     path: "/metrics"
-
 # ──────────────────────────────────────────
 # Frontend
 # ──────────────────────────────────────────
@@ -27,7 +26,7 @@ frontend:
   replicaCount: 3
   image:
     repository: fasih6/frontend
-    tag: "main-2b69588d"
+    tag: "60d564a"
     pullPolicy: IfNotPresent
   port: 80
   resources:
@@ -37,7 +36,6 @@ frontend:
     limits:
       memory: "256Mi"
       cpu: "200m"
-
 # ──────────────────────────────────────────
 # MySQL
 # ──────────────────────────────────────────
@@ -48,12 +46,11 @@ mysql:
     pullPolicy: IfNotPresent
   port: 3306
   auth:
-    rootPassword: "root"   # Will be base64-encoded in the Secret template
+    rootPassword: "root" # Will be base64-encoded in the Secret template
   database: crud_app
   storage:
     storageClassName: ebs-sc
     size: 5Gi
-
 # ──────────────────────────────────────────
 # Ingress
 # ──────────────────────────────────────────
