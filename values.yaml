@@ -6,7 +6,7 @@ backend:
   replicaCount: 3
   image:
     repository: fasih6/backend
-    tag: "4fa8240"
+    tag: "1e2ffcf"
     pullPolicy: IfNotPresent
   port: 5000
   resources:
@@ -27,7 +27,7 @@ frontend:
   replicaCount: 3
   image:
     repository: fasih6/frontend
-    tag: "4fa8240"
+    tag: "1e2ffcf"
     pullPolicy: IfNotPresent
   port: 80
   resources:
