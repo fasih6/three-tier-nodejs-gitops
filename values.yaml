@@ -48,7 +48,7 @@ mysql:
     pullPolicy: IfNotPresent
   port: 3306
   auth:
-    rootPassword: "root" # Will be base64-encoded in the Secret template
+    # rootPassword: "root" # Will be base64-encoded in the Secret template
   database: crud_app
   storage:
     storageClassName: ebs-sc
